@@ -1,0 +1,7 @@
+spring.application.name=Zuul
+server.port=8083
+eureka.client.service-url.defaultZone=http://localhost:8080/eureka/
+zuul.routes.microservice1.path=/BankingTransaction/**
+zuul.routes.microservice1.serviceId=BankingTransaction
+zuul.routes.microservice2.path=/Transaction_Statistics/**
+zuul.routes.microservice2.serviceId=Transaction_Statistics

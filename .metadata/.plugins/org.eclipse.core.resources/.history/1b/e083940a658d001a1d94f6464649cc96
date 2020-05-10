@@ -1,0 +1,36 @@
+package com.cts.service;
+
+import java.util.List;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cts.model.Transact;
+import com.cts.repository.TransactRepository;
+
+@Service
+public class TransactService {
+	
+	@Autowired
+	TransactRepository repository;
+	
+	@Transactional
+	public List<Transact> getAllTransact(){
+		return (List<Transact>) repository.findAll();
+	}
+	
+	@Transactional
+	public Boolean saveTransact(Transact transact) {
+		repository.save(transact) != null;
+	}
+	
+	@Transactional
+	public void deleteTransact(Long id) {
+		repository.deleteById(id);
+	}
+
+
+
+}

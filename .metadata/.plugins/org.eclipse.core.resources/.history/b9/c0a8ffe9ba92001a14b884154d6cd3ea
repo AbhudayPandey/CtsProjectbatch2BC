@@ -1,0 +1,27 @@
+package com.cts.security.service;
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.cts.security.model.User;
+
+@Service
+public class UserService {
+	List<User> list = null;
+	{
+		list = new ArrayList<User>();
+		list.add(new User(11l,  "Daani"));
+		list.add(new User(12l,  "Nirma"));
+	}
+	
+	public User getUserById(int id){
+
+		for(User s : list) {
+			if(id == s.getSid()) {
+				return s;
+			}
+		}
+		return null;
+	}
+}

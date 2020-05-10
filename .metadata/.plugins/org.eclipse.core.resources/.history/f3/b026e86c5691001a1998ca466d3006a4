@@ -1,0 +1,20 @@
+package com.cts.exception;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ResponseStatus;
+
+@ResponseStatus(value = HttpStatus.NOT_FOUND)
+public class TransactionException extends RuntimeException{
+	
+	private int id;
+    
+
+    public TransactionException(int id) {
+		super(String.format("%s id not found with %s : '%s'",id));
+		this.id = id;
+	}
+
+	public int getid() {
+        return id;
+    }
+
+}

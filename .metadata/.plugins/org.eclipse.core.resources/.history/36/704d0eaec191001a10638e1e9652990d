@@ -1,0 +1,45 @@
+package com.cts.model;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
+@Entity
+@ApiModel(description = "Details About the Statistics")
+@Table(name = "transaction_details")
+public class Statistics {
+	@Id
+	@ApiModelProperty(notes = "The Transaction's ID which is Unique")
+	@Column(name = "id")
+	private int id;
+    @Column(name = "amount", nullable = true)
+    @ApiModelProperty(notes = "The Transaction's Amount")
+    private double amount;
+  
+     public Statistics(int id,  double amount) {
+		this.id = id;
+		this.amount = amount;
+		}
+    public int getId() {
+		return id;
+	}
+    public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(double amount) {
+		this.amount = amount;
+	}
+    @Override
+	public String toString() {
+	return "Statistics [id=" + id + ", amount=" + amount + "]";
+	}
+}
