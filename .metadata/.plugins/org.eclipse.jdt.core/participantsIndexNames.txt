@@ -1,7 +1,0 @@
-INDEX VERSION 1.131
-C:\Users\jayant\Desktop\miniproject1.1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3333199402.index
-\Login\src\main\java
-C:\Users\jayant\Desktop\miniproject1.1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1391285318.index
-\Login\src\main\java
-C:\Users\jayant\Desktop\miniproject1.1\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3423389915.index
-\Login\src\main\java

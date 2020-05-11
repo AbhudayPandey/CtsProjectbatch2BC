@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<aop-reference-model>
-<aop-project name="ZuulGateway"/>
-<aop-project name="Login"/>
-<aop-project name="Transaction_Statistic"/>
-<aop-project name="Banking_Transaction"/>
-<aop-project name="Transaction_Server"/>
-</aop-reference-model>
