@@ -1,0 +1,7 @@
+spring.application.name=Zuul
+server.port=8083
+eureka.client.service-url.defaultZone=http://localhost:8511/eureka/
+zuul.routes.microservice1.path=/UserDetails/**
+zuul.routes.microservice1.serviceId=UserDetails
+zuul.routes.microservice2.path=/RoleDetails/**
+zuul.routes.microservice2.serviceId=RoleDetails

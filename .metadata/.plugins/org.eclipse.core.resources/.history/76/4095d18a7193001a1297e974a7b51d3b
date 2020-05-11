@@ -1,0 +1,8 @@
+spring.application.name=Zuul
+server.port=8081
+eureka.client.service-url.defaultZone=http://localhost:8080/eureka/
+zuul.routes.microservice1.path=/Banking-Transaction/**
+zuul.routes.microservice1.serviceId=Banking-Transaction
+zuul.routes.microservice2.path=/Transaction-Statistic/**
+zuul.routes.microservice2.serviceId=Transaction-Statistic
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds=100000

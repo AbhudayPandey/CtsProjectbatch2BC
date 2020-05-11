@@ -1,0 +1,5 @@
+package com.cts.logger;
+
+public class GlobalResource {
+
+}
