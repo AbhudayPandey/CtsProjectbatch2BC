@@ -16,9 +16,9 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+
+
+
 @NonNull
 @Entity
 @Table(name = "transaction_details")
@@ -44,6 +44,47 @@ public class Transaction {
     @Temporal(TemporalType.TIMESTAMP)
     @CreatedDate
     private Date transactAt;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Double getAmount() {
+		return amount;
+	}
+
+	public void setAmount(Double amount) {
+		this.amount = amount;
+	}
+
+	public Date getTransactAt() {
+		return transactAt;
+	}
+
+	public void setTransactAt(Date transactAt) {
+		this.transactAt = transactAt;
+	}
+
+	@Override
+	public String toString() {
+		return "Transaction [id=" + id + ", amount=" + amount + ", transactAt=" + transactAt + "]";
+	}
+
+	public Transaction(Long id, Double amount, Date transactAt) {
+		super();
+		this.id = id;
+		this.amount = amount;
+		this.transactAt = transactAt;
+	}
+
+	public Transaction() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	
     
